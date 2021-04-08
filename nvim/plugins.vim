@@ -1,6 +1,7 @@
 " include vim_plug
-if filereadable(expand('vim_plug.vim'))
-    source vim_plug.vim
+let custom_vimplug_file = expand('%:p:h') . '/vim_plug.vim'
+if filereadable($custom_vimplug_file)
+    source $custom_vimplug_file
 endif
 
 call plug#begin(expand('~/.config/nvim/plugged'))
